@@ -1,0 +1,439 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Serif Display", serif;
+    background: linear-gradient(to right, 
+      #000000 0%, 
+      #000000 1%, 
+      #0a2f51 100%
+    );
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+.background {
+    min-height: 100vh;
+    background: linear-gradient(to right, 
+      #000000 0%, 
+      #000000 1%, 
+      #0a2f51 100%
+    );
+  }
+
+  .navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 2px 4px;   /* Adjusted vertical padding */
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 36px;
+    display: flex;
+    flex-wrap: wrap; /* add this */
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    max-height: 160px;        /* Keeps it from getting too tall */
+    width: auto;             /* Let width scale with height */
+    height: auto;            /* Preserve image ratio */
+    display: block;          /* Avoid inline spacing issues */
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      max-height: 100px;
+    }
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: flex-end;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #e0f7fa;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+    line-height: 1.6;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.7;
+  }
+  
+  /* Initially hide hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #e0f7fa;
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    z-index: 1100;
+    position: relative;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    flex-direction: column;
+    align-items: center;       /* Centrera horisontellt */
+    justify-content: flex-start;
+    text-align: center;
+    gap: 24px;
+    padding-top: 120px;        /* Flytta ner från toppen för att undvika logon */
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .navbar-inner {
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+
+.glow-ellipse {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 1400px;
+    height: 2400px;
+    background: #687f94;
+    border-radius: 50%;
+    filter: blur(500px);
+    opacity: 0.8;
+    z-index: 0;
+  }
+
+  .hero {
+    position: relative;
+    width: 90%;
+    height: 60vh; /* Responsive height */
+    min-height: 360px; /* Prevent it from getting too small on mobile */
+    margin: 160px auto 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35; /* match the darkness from Figma */
+    z-index: 0;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 2vw + 1rem, 2.75rem);
+    margin-bottom: 2px;
+  }
+  .hero p {
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: 1.5rem; /* Adjust as needed */
+    }
+  
+    .hero p {
+      font-size: 1rem; /* Adjust as needed */
+    }
+  }  
+  
+  @media (max-width: 768px) {
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+  
+
+  .booking-button {
+    background-color: #194c80;
+    color: white;
+    padding: 12px 24px;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  .booking-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: -2rem; /* optional, tweak spacing with section below */
+  }
+  
+  .booking-button.large {
+    padding: 16px 32px;
+    font-size: clamp(2rem, 2vw + 1rem, 2.75rem); /* ~32–48px */
+    border-radius: 12px;
+    font-weight: 700;
+    background-color: rgba(10, 47, 81, 0.5);
+  }
+  
+  
+  .info-bar {
+    margin-top: -4px;
+    color: #e0f7fa;
+    font-size: clamp(2rem, 2vw + 1rem, 2.75rem);
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 6px 6px;
+  }
+  
+  .info-text {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    will-change: opacity;
+  }
+  
+  .info-text.show {
+    opacity: 1;
+  }
+  
+  
+  .about-section {
+    width: 90%;
+    max-width: 1066px;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+  }
+  @media (max-width: 768px) {
+    .about-block {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .about-text {
+      padding: 0;
+    }
+  
+    .about-image {
+      margin-bottom: 1.5rem; /* Instead of margin-top so it's above text */
+    }
+  }
+  
+  .about-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 12px;
+  }
+    
+  .about-text {
+    flex: 1;
+    padding-right: 2rem;
+    color: #e0f7fa;
+  }
+  
+  .about-text h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    font-family: "DM Serif Text", serif;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    line-height: 1.6;
+  }
+  
+  .about-image {
+    flex-shrink: 0;
+  }
+  
+  .about-image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+  }  
+  
+  @media (max-width: 768px) {
+    .about-block {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .about-block:nth-child(2) {
+      flex-direction: column;
+    }
+  
+    .about-text {
+      padding: 0;
+    }
+  
+    .about-image {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+  .testimonials {
+    padding: 4rem 2rem;
+    color: #e0f7fa;
+    text-align: center;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    line-height: 1.6;
+  }
+  
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .testimonial {
+    background: rgba(10, 47, 81, 0.5);
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    line-height: 1.6;
+  }  
+  
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #e0f7fa;
+  }
+  
+  .contact > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .contact > div:nth-child(1) {
+    text-align: left;
+  }
+  
+  .contact > div:nth-child(2) {
+    text-align: center;
+  }
+  
+  .contact > div:nth-child(3) {
+    text-align: right;
+  }
+
+  .contact p {
+    word-break: break-word;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+    line-height: 1.6;
+  }
+  
+  .social a {
+    color: inherit; /* inherit text color */
+    text-decoration: none;
+    font-weight: 400;
+    font-size: clamp(1rem, 1vw + 0.3rem, 1.25rem);
+  }
+  
+  .social a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+  
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+  }
+  

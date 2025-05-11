@@ -1,24 +1,268 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-  <meta charset="utf-8" />
-  <title>Omdirigerar …</title>
-
-  <!-- 0 sekunders 301‑liknande redirect -->
-  <meta http-equiv="refresh" content="0; url=https://björklundcoaching.se">
-
-  <!-- Canonical gör att Google ser rätt URL -->
-  <link rel="canonical" href="https://björklundcoaching.se">
-
-  <!-- Fångar upp alla som blockerar meta‑refresh -->
-  <script>window.location.replace('https://björklundcoaching.se');</script>
-
-  <style>
-    body {font-family: system-ui, sans-serif; display:grid; place-items:center; height:100vh;}
-    a {font-weight:600;}
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="assets/group-5.png">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <title>Personlig Tränare Stockholm | PT & Coaching | Björklund Coaching</title>
+  
+    <!-- Meta Tags -->
+    <meta name="description" content="Letar du efter en PT i Stockholm? Björklund Coaching erbjuder professionell personlig träning och coachning i Stockholm – för dig som vill bli starkare, skadefri och trygg i gymmet." />
+    <meta name="keywords" content="Personlig tränare Stockholm, PT, PT Stockholm, coaching, styrketräning, träning, träningscoach, träningsrådgivning, träningsprogram, träningsrådgivning Stockholm, personal trainer Stockholm, fitness coach, Crossfit, styrkelyft, gym coach Stockholm" />
+    <meta name="author" content="Simon Björklund" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://bjorklundcoaching.se/" />
+  
+    <!-- Open Graph (Facebook) -->
+    <meta property="og:title" content="Personlig Tränare i Stockholm | Björklund Coaching" />
+    <meta property="og:description" content="Upplev professionell coaching, styrketräning och rehab med Simon Björklund – personlig tränare i Stockholm." />
+    <meta property="og:image" content="https://bjorklundcoaching.se/assets/group-5.png" />
+    <meta property="og:url" content="https://bjorklundcoaching.se/" />
+    <meta property="og:type" content="website" />
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Personlig Tränare i Stockholm | Björklund Coaching" />
+    <meta name="twitter:description" content="Träna med Simon Björklund – personlig tränare och coach i Stockholm." />
+    <meta name="twitter:image" content="https://bjorklundcoaching.se/assets/group-5.png" />
+  
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "name": "Björklund Coaching",
+            "image": "https://bjorklundcoaching.se/assets/simonprofil.png",
+            "description": "Personlig tränare och träningscoach i Stockholm med expertis inom styrkelyft och rehab.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Heliosgatan 17",
+              "addressLocality": "Stockholm",
+              "postalCode": "113 52",
+              "addressCountry": "SE"
+            },
+            "url": "https://bjorklundcoaching.se/",
+            "telephone": "+46705321755",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 59.3326,
+              "longitude": 18.0649
+            },
+            "sameAs": [
+              "https://www.instagram.com/bjorklundcoaching",
+              "https://www.bokadirekt.se/places/bjorklund-coaching-129299"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Vad kostar en personlig tränare i Stockholm?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hos Björklund Coaching erbjuder vi konkurrenskraftiga paket för personlig träning i Stockholm – se priserna på vår bokningssida."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Behöver jag vara i form för att börja med PT?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolut inte. Träningen anpassas efter din nivå och målsättning – nybörjare är varmt välkomna."
+                }
+              }
+            ]
+          }
+        ]
+      }
+      </script>
+      
+    <!-- Fonts and styles -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 <body>
-  <p>Omdirigerar … Om inget händer, <a href="https://björklundcoaching.se">klicka här</a>.</p>
+    <div class="background">
+      <header class="navbar">
+        <div class="navbar-inner">      
+          <img src="assets/group-5.png" alt="Personlig träning och coaching – Björklund Coaching Stockholm logo" class="logo" />
+          <!-- Hamburger icon -->
+          <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+      
+          <!-- Navigation links -->
+          <nav class="nav-links">
+            <a href="#home">Hem</a>
+            <a href="#about">Om</a>
+            <a href="#philosophy">Träningsfilosofi</a>
+            <a href="#testimonials">Kundomdömen</a>
+            <a href="#contact">Kontakt</a>
+          </nav>
+        </div>
+      </header>
+      
+  
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="assets/Simon_compressed.webm" type="video/webm" />
+          <source src="assets/Simon_compressed.mp4" type="video/mp4" />
+          Din webbläsare stöder inte video-taggen.
+        </video>
+      
+        <div class="container">
+          <h1>
+            Träning som ger resultat<span class="hide-on-mobile"> | PT Stockholm</span>
+          </h1>          
+          <p>Bli starkare, skadefri och trygg i gymmet</p>
+          <a href="https://www.bokadirekt.se/places/bjorklund-coaching-129299" class="booking-button">Boka tid</a>
+        </div>
+      </section>
+  
+      <!-- Intro Bar -->
+      <section class="info-bar">
+        <div class="info-text-container">
+          <p class="info-text">Få personlig träning med tydlig struktur</p>
+        </div>
+      </section>      
+  
+      <!-- About Simon -->
+      <section id="about" class="about-section">
+        <div class="about-block fade-in">
+          <div class="about-text">
+            <h2>Simon Björklund – Licensierad PT</h2>
+            <p>Jag är personlig tränare med över 10 års erfarenhet och bakgrund som brandman – ett yrke som stärkt mitt driv att hjälpa andra. Jag har tävlat i styrkelyft, crossfit och tyngdlyftning och vunnit VM-guld i bänkpress och marklyft vid World Police and Fire Games, en internationell tävling för blåljuspersonal. Jag studerar även till naprapat för att kunna hjälpa människor både med träning, rehab och återhämtning på djupare nivå.</p>
+          </div>
+          <div class="about-image">
+            <img src="assets/simonprofil.png" alt="Simon Björklund – personlig tränare i Stockholm">
+          </div>
+        </div>
+  
+      <!-- Training Philosophy -->
+      <div class="about-block fade-in">
+        <div class="about-text">
+          <h2 id="philosophy">Min Träningsfilosofi</h2>
+          <p>Träning ska ge mer än bara resultat. Den ska bygga självförtroende, skapa glädje och kännas meningsfull. Oavsett om du är ny i gymmet eller har lång erfarenhet, så möter jag dig där du är och bygger vidare därifrån.</p>
+        </div>
+        <div class="about-image">
+          <img src="assets/image.png" alt="Simon coaching - personlig träning i Stockholm">
+        </div>
+      </div>
+    </section>
+  
+      <!-- Testimonials -->
+      <section id="testimonials" class="testimonials fade-in">
+        <h2>Vad tidigare kunder säger</h2>
+        <div class="testimonial-grid fade-in">
+          <div class="testimonial">"Trygg, proffsig och engagerad."</div>
+          <div class="testimonial">"Tydlig struktur, bra tempo och fokus."</div>
+          <div class="testimonial">"Jag utvecklas varje vecka, både i teknik och styrka."</div>
+          <div class="testimonial">"Det märks att du har koll – jag känner mig alltid trygg."</div>
+        </div>
+      </section>
+  
+      <!-- Contact -->
+      <div class="booking-cta fade-in">
+        <a href="https://www.bokadirekt.se/places/bjorklund-coaching-129299" class="booking-button large">Boka tid</a>
+      </div>
+      
+      <section id="contact" class="contact fade-in">
+        <div class="contact-info">
+          <h3>Kontakt</h3>
+          <p>Simon Björklund<br>Personlig Tränare<br>0705275355<br>bjorklundcoaching@gmail.com</p>
+        </div>
+        <div class="location">
+          <h3>Plats</h3>
+          <p>Crossfit Nordic<br>Hälsingegatan 47<br>113 31 Stockholm</p>
+        </div>
+        <div class="social">
+          <h3>Följ & Info</h3>
+          <p>
+            <a href="https://www.instagram.com/bjorklundcoaching" target="_blank" rel="noopener noreferrer">
+              Instagram | @bjorklundcoaching
+            </a>
+          </p>
+        </div>
+      </section>
+  
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 Björklund Strength And Coaching AB</p>
+      </footer>
+    </main>
+</div>  
+<script>
+  // Scroll fade-in effect
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // Optional: one-time animation
+      }
+    });
+  }, {
+    threshold: 0.15,
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Hamburger menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Add close on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+</script>
+<script>
+  const phrases = [
+    "Träna smartare – bli starkare",
+    "Coaching med bred erfarenhet",
+    "Få personlig träning med tydlig struktur"
+  ];
+
+  const textElement = document.querySelector('.info-text');
+  let index = 0;
+  let fading = false;
+
+  function showNextPhrase() {
+    if (fading) return;
+    fading = true;
+
+    // Start fade out
+    textElement.classList.remove('show');
+
+    // Wait for fade-out to finish
+    setTimeout(() => {
+      index = (index + 1) % phrases.length;
+      textElement.textContent = phrases[index];
+
+      // Start fade in
+      textElement.classList.add('show');
+      fading = false;
+    }, 800); // Match this with your fade-out duration
+  }
+
+  // First show
+  textElement.textContent = phrases[index];
+  textElement.classList.add('show');
+
+  // Change every 4s (includes fade duration)
+  setInterval(showNextPhrase, 4000);
+</script>
 </body>
-</html>
